@@ -1,0 +1,146 @@
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+
+   body {
+       background: linear-gradient(135deg, #171619 0%, #dce9ff 50%, #171619 100%);
+       min-height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 20px;
+   }
+
+   .calculator {
+       width: 320px;
+       background: #22252d;
+       border-radius: 20px;
+       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+       overflow: hidden;
+   }
+
+   .display {
+       background: #22252d;
+       color: white;
+       padding: 30px 20px 20px;
+       text-align: left;
+       direction: ltr;
+   }
+
+   .display-input {
+       width: 100%;
+       background: transparent;
+       border: none;
+       color: white;
+       font-size: 2rem;
+       text-align: right;
+       outline: none;
+       margin-bottom: 10px;
+       pointer-events: none;
+   }
+
+   .display-result {
+       font-size: 1.8rem;
+       color: #888;
+       text-align: right;
+       min-height: 40px;
+   }
+
+   
+
+   .keypad {
+       background: #292d36;
+       border-radius: 20px 20px 0 0;
+       padding: 20px;
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 12px;
+   }
+
+   .key {
+       background: #272b33;
+       color: white;
+       border: none;
+       border-radius: 12px;
+       height: 60px;
+       font-size: 1.5rem;
+       font-weight: 500;
+       cursor: pointer;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       transition: all 0.2s;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .key:active {
+       transform: scale(0.95);
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   }
+
+   .operator {
+       color: white;
+       background: #2e9da9;
+   }
+
+   .equals {
+       background: #e74c3c;
+       color: white;
+       grid-column: span 2;
+   }
+
+   .clear {
+       background: #fd5e53;
+       color: white;
+   }
+
+   .zero {
+       grid-column: span 2;
+   }
+
+   .calculator-title {
+       text-align: center;
+       color: white;
+       margin-bottom: 20px;
+       font-size: 1.5rem;
+   }
+
+   .note {
+       text-align: center;
+       color: white;
+       margin-top: 20px;
+       font-size: 0.9rem;
+       opacity: 0.8;
+   }
+
+   .key:hover {
+       transform: scale(1.03);
+       background: #2f333d;
+   }
+
+   .operator:hover {
+       background: #38b2ac;
+   }
+
+   .equals:hover {
+       background: #ff6b6b;
+   }
+
+   .clear:hover {
+       background: #ff7979;
+   }
+
+   @media (max-width: 400px) {
+       .calculator {
+           width: 100%;
+           max-width: 300px;
+       }
+
+       .key {
+           height: 50px;
+           font-size: 1.2rem;
+       }
+   }
